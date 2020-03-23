@@ -6,6 +6,8 @@ import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
+import static java.util.stream.Collectors.groupingBy;
+
 
 public class Main {
 
@@ -40,7 +42,7 @@ public class Main {
                 e.printStackTrace();
             }
         }
-        Map<String, List<Double>> results = itemList.stream().collect(Collectors.groupingBy(Item::getName,
+        Map<String, List<Double>> results = itemList.stream().collect(groupingBy(Item::getName,
                 Collectors.mapping(Item::getPrice, Collectors.toList())));
 
         results.forEach((String k, List<Double> v) -> {

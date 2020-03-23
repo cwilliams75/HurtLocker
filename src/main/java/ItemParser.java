@@ -13,8 +13,6 @@ public class ItemParser {
         return response;
     }
 
-
-
     public Item parseStringIntoItem(String rawItem) throws ItemParseException {
         ArrayList<String> keyValuePairs;
         keyValuePairs = findKeyValuePairsInRawItemData(rawItem);
@@ -54,7 +52,6 @@ public class ItemParser {
     private ArrayList<String> splitStringWithRegexPattern(String stringPattern, String inputString){
         return new ArrayList<String>(Arrays.asList(inputString.split(stringPattern)));
     }
-
 
     public int getErrors() {
         return errors;

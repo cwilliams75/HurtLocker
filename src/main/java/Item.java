@@ -4,8 +4,6 @@ public class Item {
     private String type;
     private String expiration;
 
-
-
     /**
      * Item should not be created unless you have all of the elements, which is why you are forcing
      * it to be set in the constructor. In ItemParser, if you do not find all the elements of a Item,
